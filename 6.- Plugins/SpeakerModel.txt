@@ -1,0 +1,32 @@
+public class SpeakerModel
+    {
+        [JsonPropertyName("id")]
+        public int Id { get; set; }
+
+        [JsonPropertyName("name")]
+        public string? Name { get; set; }
+
+        [JsonPropertyName("volume_level")]        
+        public int? VolumeLevel { get; set; }
+
+        [JsonPropertyName("is_muted")]
+        public bool? IsMuted { get; set; }
+
+        [JsonPropertyName("playback_status")]
+        public PlaybackStatus? PlaybackStatus { get; set; }
+
+        [JsonPropertyName("connected_device")]        
+        public string? ConnectedDevice { get; set; }
+
+        [JsonPropertyName("battery_level")]        
+        public int? BatteryLevel { get; set; }
+    }
+
+    [JsonConverter(typeof(JsonStringEnumConverter))]
+    public enum PlaybackStatus
+    {
+        Stopped,
+        Playing,
+        Paused,
+        Buffering
+    }

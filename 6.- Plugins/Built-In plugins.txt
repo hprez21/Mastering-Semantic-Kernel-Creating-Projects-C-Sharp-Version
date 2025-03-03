@@ -1,0 +1,35 @@
+KernelPlugin conversationPlugin =
+    KernelPluginFactory.CreateFromType<ConversationSummaryPlugin>();
+//var filePlugin = KernelPluginFactory.CreateFromType<FileIOPlugin>();
+//var httpPlugin = KernelPluginFactory.CreateFromType<HttpPlugin>();
+//var mathPlugin = KernelPluginFactory.CreateFromType<MathPlugin>();
+//var timePlugin = KernelPluginFactory.CreateFromType<TimePlugin>();
+//var textPlugin = KernelPluginFactory.CreateFromType<TextPlugin>();
+//var waitPlugin = KernelPluginFactory.CreateFromType<WaitPlugin>();
+
+
+//var summary = await azureKernel
+//    .InvokeAsync(conversationPlugin.Where(x => x.Name == "SummarizeConversation").FirstOrDefault(),
+//    new() { { "input", "Semantic Kernel is a robust open-source framework designed to integrate artificial intelligence (AI) with application development seamlessly. It leverages large language models (LLMs) such as GPT or similar technologies, enabling developers to build applications that can comprehend, generate, and reason about textual content. The framework facilitates the creation of applications that blend natural language processing capabilities with traditional programming. At its core, Semantic Kernel introduces the concept of \"semantic memory,\" which allows applications to store and retrieve information in a way that mimics human cognition. This feature is instrumental in building intelligent systems capable of performing tasks like context-aware conversations, summarization, recommendation, and more.\r\n\r\nIn addition to its powerful AI capabilities, Semantic Kernel provides extensibility and flexibility to adapt to a wide range of use cases. Developers can design and manage workflows that dynamically adapt based on user input or real-time data, significantly enhancing user experience. By integrating seamlessly with existing tools and libraries, Semantic Kernel simplifies the AI development process, empowering teams to create solutions without requiring deep expertise in machine learning. Whether for creating advanced chatbots, automating content generation, or enhancing decision-making systems, Semantic Kernel represents a significant step forward in leveraging the potential of AI in software development" } });
+
+
+//var writeFile = await azureKernel.InvokeAsync(filePlugin.Where(x => x.Name == "Write").FirstOrDefault(),
+//                    new() { { "path", "G:\\sk\\test.txt" }, { "content", "This is a demo" } });
+
+//var read = await azureKernel.InvokeAsync(filePlugin.Where(x => x.Name == "Read").FirstOrDefault(),
+//                    new() { { "path", "G:\\sk\\test.txt" } });
+
+//var httpGet = await azureKernel.InvokeAsync(httpPlugin.Where(x => x.Name == "Get").FirstOrDefault(),
+//                    new() { { "uri", "https://jsonplaceholder.typicode.com/posts/1" } });
+
+//var add = await azureKernel.InvokeAsync(mathPlugin.Where(x => x.Name == "Add").FirstOrDefault(),
+//                    new() { { "value", 10.0 }, { "amount", 20.0 } });
+
+//var concat = await azureKernel.InvokeAsync(textPlugin.Where(x => x.Name == "Concat").FirstOrDefault(),
+//                    new() { { "input", "Hello " }, { "input2", "World" } });
+
+//var wait = await azureKernel.InvokeAsync(waitPlugin.Where(x => x.Name == "Seconds").FirstOrDefault(),
+//                    new() { { "seconds", 5.0m } });
+
+//var time = await azureKernel.InvokeAsync(timePlugin.Where(x => x.Name == "Time").FirstOrDefault(),
+//                    new() { });

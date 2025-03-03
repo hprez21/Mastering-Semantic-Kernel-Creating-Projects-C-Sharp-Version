@@ -1,0 +1,7 @@
+    public interface IFileService
+    {
+        void CreateFile(string fileName);
+        void DeleteFile(string fileName);
+        string ReadFile(string filePath);
+        void WriteFile(string fileName, string content);
+    }
