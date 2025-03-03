@@ -1,0 +1,25 @@
+﻿name: GenerateIdeas
+template: |
+    You are a successful podcast producer. I will provide you with a document in markdown format, which you should use to create a script for an engaging and informative podcast.
+    Use the document as a basis to extract the most interesting data for a discussion to take place on the podcast    
+    {{ $documentContent }}
+    Here are the steps you should follow
+    1. Analyze the content
+    2. Carefully examine the provided text, ensuring that you extract the most valuable information from it, such as key points, interesting facts, anecdotes, noteworthy data, and any other highly relevant information. You should omit irrelevant content.
+    3. Brainstorm ideas
+    Generate ideas for presenting the information in a way that keeps the audience engaged. For example, consider
+    Crafting engaging stories, employing storytelling techniques, or using hypothetical scenarios to make the content more listener-friendly.
+    Simplifying complex data or concepts, aiming to explain them in an easily understandable manner.
+    Developing thought-provoking questions to be explored throughout the podcast.
+    Creating creative ways to fill any gaps that might remain.
+template_format: semantic-kernel
+description: A function that generates a concise, engaging story about a specific topic.
+input_variables:
+  - name: documentContent
+    description: The document content
+    is_required: true  
+output_variable:
+  description: The set of ideas for generating a podcast script
+execution_settings:
+  default:
+    temperature: 0.8

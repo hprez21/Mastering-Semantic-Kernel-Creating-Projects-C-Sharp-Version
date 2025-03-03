@@ -1,0 +1,47 @@
+﻿name: GenerateConclusion
+template: |
+    At the end of the dialogue, the host and guest should naturally summarize the key insights.
+    This should feel like a casual conversation, rather than a formal recap, reinforcing the main points one last time before signing off.
+    And a natural transition.
+    
+    #Summarize Key Insights:
+    Naturally weave a summary of key points into the closing part of the dialogue. This should feel like a casual conversation rather than a formal recap, reinforcing the main takeaways before signing off.
+
+       - Include brief "breather" moments for listeners to absorb complex information
+       - End on a high note, perhaps with a thought-provoking question or a call-to-action for listeners
+
+    Context：{{ $script }}
+    host：{{ $hostName }}
+    guest：{{ $guestName }}
+    language{{ $language }}
+    The names of the host and guest are not constrained by language.
+    You need to draw conclusions based on the context, maintaining the same format as the context.Avoid introductions and repetitive content that is consistent with the context.
+
+    #Script Format
+    The script should begin with the host speaking.
+    The dialogue should alternate between the host and the guest, with each speaking one line at a time.
+    Do not include the speaker's name at the beginning of each line.
+
+    #Output Requirements
+    The final script should only contain the dialogue content. Avoid including any XML tags or additional formatting in the output.
+
+template_format: semantic-kernel
+description: A function that generates a summarize about a conversation between a host and a guest.
+input_variables:
+  - name: script
+    description: The conversation script between host and guest
+    is_required: true  
+  - name: hostName
+    description: The name of the host
+    is_required: true  
+  - name: guestName
+    description: The name of the guest
+    is_required: true  
+  - name: language
+    description: The language of the output script
+    is_required: true  
+output_variable:
+  description: The set of ideas for generating a podcast script
+execution_settings:
+  default:
+    temperature: 0.8
